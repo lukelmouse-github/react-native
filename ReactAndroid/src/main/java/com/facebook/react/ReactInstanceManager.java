@@ -40,6 +40,7 @@ import android.net.Uri;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
 import android.os.Process;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.Nullable;
@@ -1315,6 +1316,7 @@ public class ReactInstanceManager {
   private ReactApplicationContext createReactContext(
       JavaScriptExecutor jsExecutor, JSBundleLoader jsBundleLoader) {
     FLog.d(ReactConstants.TAG, "ReactInstanceManager.createReactContext()");
+    FLog.w(ReactConstants.TAG, "测试Android编译", new Throwable());
     ReactMarker.logMarker(CREATE_REACT_CONTEXT_START, jsExecutor.getName());
     final ReactApplicationContext reactContext = new ReactApplicationContext(mApplicationContext);
 
